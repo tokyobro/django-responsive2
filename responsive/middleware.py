@@ -13,7 +13,14 @@ from .utils import Device
 
 
 class ResponsiveMiddleware(object):
+    # newly added code
+    def __init__(self, get_response):
+        self.get_response = get_response
 
+    # newly added code
+    def __call__(self, request):
+        return self.get_response(request)
+        
     def process_request(self, request):
         responsive_cookie = request.COOKIES.get(settings.RESPONSIVE_COOKIE_NAME, None)
         if responsive_cookie:
