@@ -39,7 +39,8 @@ class ResponsiveAppConf(AppConf):
 
     # Borrowed from ZURB Foundation framework.
     # See http://foundation.zurb.com/docs/media-queries.html
-    MEDIA_QUERIES = {
+    # MEDIA_QUERIES = {
+    RESPONSIVE_MEDIA_QUERIES = {
         'small': {
             'verbose_name': _('Small screens'),
             'min_width': None,
