@@ -41,6 +41,11 @@ class ResponsiveAppConf(AppConf):
     # See http://foundation.zurb.com/docs/media-queries.html
     # MEDIA_QUERIES = {
     RESPONSIVE_MEDIA_QUERIES = {
+        'iphone': {
+        'verbose_name': _('iPhone Retina'),
+        'min_width': 320,   # mobile first queries
+        'pixel_ratio': 2
+        },
         'small': {
             'verbose_name': _('Small screens'),
             'min_width': None,
